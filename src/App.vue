@@ -29,7 +29,7 @@ export default {
       this.todos = this.todos.filter(el => el.id != id);
     },
     addTodo(e) {
-      if (e.key === "Enter") {
+      if (e.key === "Enter" && e.target.value) {
         this.todos.push({
           completed: false,
           title: e.target.value,
